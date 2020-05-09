@@ -14,14 +14,11 @@ class _FirstUserState extends State<FirstUser> {
   bool _isLoading = false;
 
   void callSnackBar(String msg, [int er]) {
-    // msg="There is no record with this user, please register first by clicking Register or check the user mail id or Password";
+ 
     final SnackBar = new prefix0.SnackBar(
       content: new Text(msg),
       duration: new Duration(seconds: 1),
-      // action: new SnackBarAction(label: "Register",
-      // onPressed: (){
-      //   Navigator.pushNamed(context, "Register");
-      // },),
+     
     );
     _scaffoldKey.currentState.showSnackBar(SnackBar);
   }
