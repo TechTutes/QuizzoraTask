@@ -19,16 +19,7 @@ class FirstScreen extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.5,
               child: FutureBuilder(
                 future: FirebaseAuth.instance.currentUser(),
-                // . then((user){
-                //       if(user!=null){
-                //          print("Navigator.of(context).pop();");
-                //          Text('Loading...');
-                //           print("Navigator.of(context).pop();");
-                //       }
-                //       else{
-                //         print("Navigator");
-                //       }
-                //     }),
+               
                 builder: (context, AsyncSnapshot<FirebaseUser> snapshot) {
                   if (snapshot.hasData) {
                     return Padding(
